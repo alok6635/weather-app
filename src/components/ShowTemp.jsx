@@ -1,7 +1,7 @@
 import UseAxios from "./UseAxios";
 
 const ShowTemp = ({ city, endpoint, unit, temp, windSpeed }) => {
-    let url = `http://api.openweathermap.org/data/2.5/${endpoint}?q=${city}&appid=06d4310b7f63d4c98211cc3820afbfcd&mode=json&units=${unit}`
+    let url = `https://api.openweathermap.org/data/2.5/${endpoint}?q=${city}&appid=06d4310b7f63d4c98211cc3820afbfcd&mode=json&units=${unit}`
     const { data, error } = UseAxios(url, city, endpoint, unit)
 
     return (

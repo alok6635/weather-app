@@ -8,3 +8,5 @@ npm install
 # Start the development server
 npm run dev
 
+# host url-
+https://alok6635.github.io/weather-app/
