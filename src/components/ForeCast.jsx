@@ -1,13 +1,8 @@
-
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import UseAxios from './UseAxios';
 
 const Forecast = ({ city, endpoint, unit, temp }) => {
-
-
   let url = `http://api.openweathermap.org/data/2.5/${endpoint}?q=${city}&appid=06d4310b7f63d4c98211cc3820afbfcd&mode=json&units=${unit}`
-  const { loading, data, error } = UseAxios(url, city, endpoint, unit)
+  const {data, error } = UseAxios(url, city, endpoint, unit)
 
   console.log(data);
 

@@ -1,15 +1,14 @@
-import { useState } from "react";
 import UseAxios from "./UseAxios";
 
 const ShowTemp = ({ city, endpoint, unit, temp, windSpeed }) => {
     let url = `http://api.openweathermap.org/data/2.5/${endpoint}?q=${city}&appid=06d4310b7f63d4c98211cc3820afbfcd&mode=json&units=${unit}`
-    const { loading, data, error } = UseAxios(url, city, endpoint, unit)
+    const { data, error } = UseAxios(url, city, endpoint, unit)
 
     return (
         <>
 
             {
-                error ? <h2 className="error">{manageErr}</h2> :
+                error ? <h2 className="error">{error}</h2> :
                     <div>
                         <div className="container my-5">
                             <ul className="flex-wrap listData">
